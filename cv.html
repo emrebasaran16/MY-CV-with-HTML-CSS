@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Emre Basaran - CV</title>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background: #eef1f5;
+    }
+
+    /* Header */
+    .cv-header {
+      display: flex;
+      align-items: flex-start;
+      background: linear-gradient(135deg, #a8dadc, #457b9d);
+      color: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .photo {
+      width: 120px;
+      height: 160px;
+      background: #d3d3d3;
+      border-radius: 8px;
+      margin-right: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .info {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .name {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .column {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      font-size: 15px;
+    }
+
+    .contact-item i {
+      margin-right: 10px;
+    }
+
+    .linkedin { color: #0077b5; }
+    .github { color: #171515; }
+    .email-icon { color: #d44638; }
+    .phone-icon { color: #34a853; }
+    .location-icon { color: #4285f4; }
+
+    /* Headings */
+    h2 {
+      text-align: center;
+      font-size: 24px;
+      margin-top: 60px;
+      margin-bottom: 20px;
+    }
+
+    /* Card-style section (education & activities) */
+    .education-entry {
+      display: flex;
+      align-items: center;
+      background-color: #ffffff;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      max-width: 800px;
+      gap: 20px;
+    }
+
+    .edu-logo {
+      width: 60px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .edu-info h3 {
+      margin: 0 0 6px;
+      font-size: 18px;
+    }
+
+    .edu-info p {
+      margin: 2px 0;
+      font-size: 15px;
+      color: #444;
+    }
+
+    .skills {
+      max-width: 800px;
+      margin: 20px auto 60px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: space-between;
+    }
+
+   .skill-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      flex: 1 1 45%;
+      margin-bottom: 10px;
+    }
+
+    .skill-icon {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      margin-top: 2px;
+    }
+
+    .skill-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .skill-title {
+      font-weight: bold;
+      font-size: 15px;
+      margin-bottom: 2px;
+    }
+
+    .skill-desc {
+      font-size: 14px;
+      color: #444;
+      font-weight: normal;
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 600px) {
+      .cv-header, .education-entry {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .column {
+        width: 100%;
+      }
+
+      .edu-logo {
+        margin-bottom: 10px;
+      }
+
+      .skills {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .skill-item {
+        flex: 1 1 100%;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+	@media print {
+  body {
+    background: white;
+    margin: 0;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .cv-header, .education-entry, .skills {
+    box-shadow: none !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  h2 {
+    page-break-after: avoid;
+    break-after: avoid;
+    color: #000 !important;
+  }
+
+  .photo {
+    background: #ccc !important;
+    color: #000 !important;
+  }
+
+  .skill-icon {
+    filter: none !important;
+  }
+
+  @page {
+    size: A4;
+    margin: 20mm;
+  }
+
+  a[href]:after {
+    content: "" !important;
+  }
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+}
+
+.edu-logo {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+  
+.two-column-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+.left-col, .right-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-wrapper {
+  background: linear-gradient(135deg, #a8dadc, #457b9d);
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+@media print {
+  .two-column-layout {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}
+
+@media print {
+  body {
+    zoom: 69%;
+  }
+}
+</style>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Header -->
+<div class="cv-header">
+<div class="photo">
+  <img src="img/pp.png" alt="Emre Başaran Fotoğraf" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+</div>
+
+<div class="info">
+<div class="name">Emre BAŞARAN</div>
+<div class="column">
+<div class="contact-item"><i class="fas fa-phone phone-icon"></i> 05396183616</div>
+<div class="contact-item"><i class="fas fa-map-marker-alt location-icon"></i> Çankaya / Ankara</div>
+<div class="contact-item"><i class="fas fa-envelope email-icon"></i> emrebasaranwork@gmail.com</div>
+</div>
+<div class="column">
+<div class="contact-item linkedin"><i class="fab fa-linkedin"></i> linkedin.com/in/basaranemre</div>
+<div class="contact-item github"><i class="fab fa-github"></i> github.com/emrebasaran16</div>
+</div>
+</div>
+</div><div class="two-column-layout"><div class="left-col"><div class="section-wrapper"><h2>Education</h2><div class="education-entry">
+<div class="logo-wrapper">
+<img alt="METU Logo" class="edu-logo" src="img/metu.png"/>
+<div class="edu-info">
+<h3>Bachelor’s Degree – Industrial Engineering</h3>
+<p><strong>Middle East Technical University (METU)</strong></p>
+<p>Status: Ongoing</p>
+<p>Start Date: 09/09/2022</p>
+</div>
+</div>
+</div><div class="education-entry">
+<img alt="Anadolu Logo" class="edu-logo" src="img/anadolu.png"/>
+<div class="edu-info">
+<h3>Bachelor’s Degree – Business Administration</h3>
+<p><strong>Anadolu University</strong></p>
+<p>Status: Ongoing</p>
+<p>Start Date: 24/08/2023</p>
+</div>
+</div><div class="education-entry">
+<img alt="Ataturk Logo" class="edu-logo" src="img/atauni.png"/>
+<div class="edu-info">
+<h3>Associate Degree – Computer Programming</h3>
+<p><strong>Atatürk University</strong></p>
+<p>Status: Graduated</p>
+<p>01/09/2020 – 29/05/2022</p>
+</div>
+</div><div class="education-entry">
+  <img alt="METU Logo" class="edu-logo" src="img/metu.png"/>
+  <div class="edu-info">
+    <h3>Bachelor’s Degree – Environmental Engineering</h3>
+    <p><strong>Middle East Technical University (METU)</strong></p>
+    <p>Status: Dropped Out</p>
+    <p>29/08/2019 – 08/09/2022</p>
+  </div>
+</div> 
+
+</div><div class="left-col">
+<div class="section-wrapper">
+  <h2>Languages</h2>
+  <div class="logo-wrapper">
+  <div class="skills">
+    <div class="skill-item">
+      <img src="img/english.png" alt="English" class="skill-icon">
+      <strong>English:<strong> <div class="skill-desc">Upper Intermediate</div>
+    </div>
+    <div class="skill-item">
+      <img src="img/turkish.png" alt="Turkish" class="skill-icon">
+      <strong>Turkish:<strong> <div class="skill-desc">Native</div>
+    </div>
+  </div>
+</div>
+</div>
+
+</div></div><div class="right-col"><div class="section-wrapper"><h2>Communities and Activities</h2><div class="education-entry">
+<div class="logo-wrapper">
+<img alt="METU Robotics Logo" class="edu-logo" src="img/metu_robotics.png"/>
+<div class="edu-info">
+<h3>METU Robotic Society</h3>
+<p><div class="skill-desc">Participated in organizing METU Robotic Days.</div></p>
+</div>
+</div>
+</div>
+<div class="education-entry">
+<img alt="METU AI Logo" class="edu-logo" src="img/metu_ai.png"/>
+<div class="edu-info">
+<h3>METU Artificial Intelligence Society</h3>
+<p><div class="skill-desc">Attended a Machine Learning course.</div></p>
+<p><div class="skill-desc">Currently working on a project within the society.</div></p>
+</div>
+</div>
+
+</div><div class="right-col"></div><div class="section-wrapper"><h2>Skills</h2><div class="skills">
+<div class="skill-item">
+      <img src="img/skills/matlab.png" alt="MATLAB" class="skill-icon" />
+      <div class="skill-text">
+        <div class="skill-title">MATLAB</div>
+        <div class="skill-desc">Proficient in mathematical modeling and numerical analysis.</div>
+      </div>
+    </div>
+    <div class="skill-item">
+      <img src="img/skills/python.png" alt="Python" class="skill-icon" />
+      <div class="skill-text">
+        <div class="skill-title">Python</div>
+        <div class="skill-desc">Advanced programming skills with experience in data analysis, object oriented programming and optimization.</div>
+      </div>
+    </div>
+    <div class="skill-item">
+      <img src="img/skills/r.png" alt="R" class="skill-icon" />
+      <div class="skill-text">
+        <div class="skill-title">R</div>
+        <div class="skill-desc">Competent in statistical computing and data visualization.</div>
+      </div>
+    </div>
+    <div class="skill-item">
+      <img src="img/skills/mysql.png" alt="MySQL" class="skill-icon" />
+      <div class="skill-text">
+        <div class="skill-title">MySQL</div>
+        <div class="skill-desc">Experienced in querying and managing relational databases.</div>
+      </div>
+    </div>
+    <div class="skill-item">
+      <img src="img/skills/siemens-nx.png" alt="Siemens NX" class="skill-icon" />
+      <div class="skill-text">
+        <div class="skill-title">Siemens NX</div>
+        <div class="skill-desc">Skilled in 3D modeling and mechanical design.</div>
+      </div>
+    </div>
+    <div class="skill-item">
+      <img src="img/skills/autocad.png" alt="AutoCAD" class="skill-icon" />
+      <div class="skill-text">
+        <div class="skill-title">AutoCAD</div>
+        <div class="skill-desc">Capable of 2D drafting and basic technical drawings.</div>
+      </div>
+    </div>
+    <div class="skill-item">
+      <img src="img/skills/css.png" alt="CSS" class="skill-icon" />
+      <div class="skill-text">
+        <div class="skill-title">CSS</div>
+        <div class="skill-desc">Limited level of proficiency with HTML, basic logic and skills known.</div>
+      </div>
+    </div>
+    <div class="skill-item">
+      <img src="img/skills/html.png" alt="HTML" class="skill-icon" />
+      <div class="skill-text">
+        <div class="skill-title">HTML</div>
+        <div class="skill-desc">This CV is prepared with HTML and CSS codes. You can access the most up-to-date version and codes from my Github account on the top right of this CV.</div>
+      </div>
+    </div>
+</div>
+</div></div></div></div>
+</body>
+</html>
